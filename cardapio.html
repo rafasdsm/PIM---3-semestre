@@ -6,6 +6,20 @@
     <title>Café Pontes</title>
   </head>
   <body>
+    <!--
+        API do governo de libras
+    -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <!----------------------------------------------------------------------------------------------------------->
     <header>
       <a href="index.html" target="_self">
         <button><</button>
@@ -16,68 +30,68 @@
       </button>
     </header>
     <main>
-        <article
+      <article
+        style="
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+          width: 250px;
+          text-align: center;
+        "
+      >
+        <div
           style="
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
             width: 250px;
-            text-align: center;
+            height: 237px;
+            background-image: url(&quot;../Midia/item1.png&quot;);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          "
+        ></div>
+
+        <p>Soda italiana de morango com toque cítrico da laranja e menta →</p>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
           "
         >
-          <div
+          <button
             style="
-              width: 250px;
-              height: 237px;
-              background-image: url(&quot;../Midia/item1.png&quot;);
-              background-position: center;
-              background-size: cover;
-              background-repeat: no-repeat;
-            "
-          ></div>
-
-          <p>Soda italiana de morango com toque cítrico da laranja e menta →</p>
-
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
+              font-size: 25px;
+              border: 1px solid black;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+              background-color: transparent;
+              color: green;
             "
           >
-            <button
-              style="
-                font-size: 25px;
-                border: 1px solid black;
-                border-radius: 50%;
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                background-color: transparent;
-                color: green;
-              "
-            >
-              +
-            </button>
+            +
+          </button>
 
-            <p></p>
+          <p></p>
 
-            <button
-              style="
-                font-size: 25px;
-                border: 1px solid black;
-                border-radius: 50%;
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                background-color: transparent;
-                color: red;
-              "
-            >
-              -
-            </button>
-          </div>
-        </article>
+          <button
+            style="
+              font-size: 25px;
+              border: 1px solid black;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+              background-color: transparent;
+              color: red;
+            "
+          >
+            -
+          </button>
+        </div>
+      </article>
     </main>
   </body>
 

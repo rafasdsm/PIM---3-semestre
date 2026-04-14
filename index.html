@@ -2,89 +2,128 @@
     Página Principal do Café Pontes
     Esta página contém a navegação, o banner principal, destaques do mês e a seção "Sobre Nós".
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Café Pontes</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--
+        API do governo de libras
+    -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <!----------------------------------------------------------------------------------------------------------->
     <!-- Barra de Navegação: Contém links para o cardápio, área de entrega e o logotipo central -->
     <nav>
-        <span id="section-1">
-            <a href="cardapio.html" target="_self">Cardápio</a>
-            <a>Área de Entrega</a> <!-- Link para verificar se o endereço é atendido -->
-        </span>
-        <h1>Café pontes</h1> <!-- Título/Logo central da cafeteria -->
-        <span id="section-2">
-            <a>Peça já</a> <!-- Atalho para pedidos rápidos -->
-        </span>
+      <span id="section-1">
+        <a href="cardapio.html" target="_self">Cardápio</a>
+        <a>Área de Entrega</a>
+        <!-- Link para verificar se o endereço é atendido -->
+      </span>
+      <h1>Café pontes</h1>
+      <!-- Título/Logo central da cafeteria -->
+      <span id="section-2">
+        <a>Peça já</a>
+        <!-- Atalho para pedidos rápidos -->
+      </span>
     </nav>
 
     <!-- Conteúdo Principal -->
     <main>
-        
-        <!-- Banner de impacto com imagem de fundo e chamada para ação -->
-        <section id="main-image">
-            <article>
-                <h1>Café Pontes</h1>
-                <p>Simplicidade com sabor e energia</p>
-                <a href="cardapio.html" target="_self">
-                    <button>Peça aqui</button>
-                </a>
-            </article>
-        </section>
+      <!-- Banner de impacto com imagem de fundo e chamada para ação -->
+      <section id="main-image">
+        <article>
+          <h1>Café Pontes</h1>
+          <p>Simplicidade com sabor e energia</p>
+          <a href="cardapio.html" target="_self">
+            <button>Peça aqui</button>
+          </a>
+        </article>
+      </section>
 
-        <!-- Seção de Destaques: Exibe os produtos exclusivos do mês atual -->
-        <section id="main-itens">
-            <h1 style="font-size: 40px;">Exclusivos deste mês</h1>
-            <article id="itens">
-                
-                <article class="item-card"> <!-- Card do Item 1: Soda Italiana -->
-                    <div id="img" style="background-image: url('../Midia/item1.png');"></div>
-                    <p>
-                        Soda italiana refrescante e equilibrada, combinando o doce do morango com toque cítrico da laranja e o frescor da menta
-                    </p>
-                    <a href="cardapio.html" target="_self">Peça Agora</a>
-                </article>
+      <!-- Seção de Destaques: Exibe os produtos exclusivos do mês atual -->
+      <section id="main-itens">
+        <h1 style="font-size: 40px">Exclusivos deste mês</h1>
+        <article id="itens">
+          <article class="item-card">
+            <!-- Card do Item 1: Soda Italiana -->
+            <div
+              id="img"
+              style="background-image: url(&quot;../Midia/item1.png&quot;)"
+            ></div>
+            <p>
+              Soda italiana refrescante e equilibrada, combinando o doce do
+              morango com toque cítrico da laranja e o frescor da menta
+            </p>
+            <a href="cardapio.html" target="_self">Peça Agora</a>
+          </article>
 
-                <article class="item-card"> <!-- Card do Item 2: Creme Brulee -->
-                    <div id="img" style="background-image: url('../Midia/item2.png');"></div>
-                    <p>
-                        Creme brulee clássico, cremoso e delicado, com base suave de baunilha e uma camada de açúcar caramelizado crocante
-                    </p>
-                    <a href="cardapio.html" target="_self">Peça Agora</a>
-                </article>
+          <article class="item-card">
+            <!-- Card do Item 2: Creme Brulee -->
+            <div
+              id="img"
+              style="background-image: url(&quot;../Midia/item2.png&quot;)"
+            ></div>
+            <p>
+              Creme brulee clássico, cremoso e delicado, com base suave de
+              baunilha e uma camada de açúcar caramelizado crocante
+            </p>
+            <a href="cardapio.html" target="_self">Peça Agora</a>
+          </article>
 
-                <article class="item-card"> <!-- Card do Item 3: Banoffe -->
-                    <div id="img" style="background-image: url('../Midia/item3.png');"></div>
-                    <p>
-                        Banoffe com sorvete de creme, combinando banana, doce de leite e base crocante, finalizada com uma bola de sorvete 
-                    </p>
-                    <a href="cardapio.html" target="_self">Peça Agora</a>
-                </article>
-            </article>
-        </section>
+          <article class="item-card">
+            <!-- Card do Item 3: Banoffe -->
+            <div
+              id="img"
+              style="background-image: url(&quot;../Midia/item3.png&quot;)"
+            ></div>
+            <p>
+              Banoffe com sorvete de creme, combinando banana, doce de leite e
+              base crocante, finalizada com uma bola de sorvete
+            </p>
+            <a href="cardapio.html" target="_self">Peça Agora</a>
+          </article>
+        </article>
+      </section>
 
-        <!-- Seção Sobre Nós: História da cafeteria-->
-        <section id="sobre-nos">
-            <aside id="sobre-image"></aside> <!-- Espaço reservado para imagem lateral via CSS -->
-            <article id="sobre-texto">
-                <h1>
-                    Café Pontes
-                </h1>
-                <img src="Midia/coffelogo.jpg"> <!-- Logotipo oficial -->
-                <p>
-                    A Cafeteria Pontes nasceu em 2010, com a proposta simples de criar um espaço acolhedor onde o café fosse mais do que uma bebida, fosse um momento. Fundada por Maria, sempre carregou um significado especial: era o seu grande sonho construir algo que unisse pessoas e criasse memórias.<br>
-                    Com o tempo, a cafeteria conquistou seus clientes com sabor, cuidado e um ambiente intimista, tornando-se um verdadeiro ponto de encontro. Mais do que um negócio, Maria sempre desejou que seu legado fosse passado para seus filhos, transformando a Cafeteria Pontes em uma tradição de família, mantida com o mesmo carinho e dedicação ao longo das gerações.
-                </p>
-            </article>
-        </section>
+      <!-- Seção Sobre Nós: História da cafeteria-->
+      <section id="sobre-nos">
+        <aside id="sobre-image"></aside>
+        <!-- Espaço reservado para imagem lateral via CSS -->
+        <article id="sobre-texto">
+          <h1>Café Pontes</h1>
+          <img src="Midia/coffelogo.jpg" />
+          <!-- Logotipo oficial -->
+          <p>
+            A Cafeteria Pontes nasceu em 2010, com a proposta simples de criar
+            um espaço acolhedor onde o café fosse mais do que uma bebida, fosse
+            um momento. Fundada por Maria, sempre carregou um significado
+            especial: era o seu grande sonho construir algo que unisse pessoas e
+            criasse memórias.<br />
+            Com o tempo, a cafeteria conquistou seus clientes com sabor, cuidado
+            e um ambiente intimista, tornando-se um verdadeiro ponto de
+            encontro. Mais do que um negócio, Maria sempre desejou que seu
+            legado fosse passado para seus filhos, transformando a Cafeteria
+            Pontes em uma tradição de família, mantida com o mesmo carinho e
+            dedicação ao longo das gerações.
+          </p>
+        </article>
+      </section>
     </main>
-</body>
+  </body>
 
-<!-- Importação dos estilos CSS -->
-<link rel="stylesheet" href="Estilos/all.css">
-<link rel="stylesheet" href="Estilos/index.css">
+  <!-- Importação dos estilos CSS -->
+  <link rel="stylesheet" href="Estilos/all.css" />
+  <link rel="stylesheet" href="Estilos/index.css" />
 </html>
