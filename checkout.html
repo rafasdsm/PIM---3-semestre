@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Entrega - Campinas</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+    />
+    <link rel="stylesheet" href="Estilos/checkout.css" />
+  </head>
+  <body>
+    <main>
+      <article class="user-form">
+        <form>
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="abc@gmail.com">
+            <input type="tel" placeholder="+55 (19)123123123">
+            <input type="submit" value="Pedir">
+        </form>
+      </article>
+      <article class="iten-total">
+
+      </article>
+      <aside class="map-delivery">
+        <div class="container">
+          <h2>🚚 Verificar Disponibilidade de Entrega</h2>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="endereco"
+              placeholder="Ex: Av. Francisco Glicério, Campinas"
+            />
+            <button onclick="buscarEndereco()">Verificar</button>
+          </div>
+
+          <div id="resultado" class="result-badge"></div>
+
+          <div id="map"></div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="Script/leaflet.js"></script>
+    <script src="Script/turf.min.js"></script>
+    <script src="Script/entrega.js"></script>
+  </body>
+</html>
