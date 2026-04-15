@@ -1,136 +1,218 @@
+/* Fontes presonalizadas*/
+@font-face {
+  font-family: "ABeeZee";
+  src: url("../Fonts/ABeeZee-Regular.ttf") format("truetype");
+  font-weight: 400; /* Use 400 for normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-flex";
+  src: url("../Fonts/Roboto-flex.ttf") format("truetype");
+  font-weight: 100 900; /* This tells CSS it handles all weights */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yrsa";
+  src: url("../Fonts/Yrsa-Bold.ttf") format("truetype");
+  font-weight: bold; /* Match the actual file content */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YsabeauOffice-Regular";
+  src: url("../Fonts/YsabeauOffice-Regular.ttf") format("truetype"); 
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  font-family: "ABeeZee", sans-serif;
+}
+
 nav {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;            
-    padding: 15px 5%;              
-    font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  font-family: sans-serif;
 }
 
-
-#section-1, #section-2 {
-    flex: 1; 
+nav h1{
+    font-family: "YsabeauOffice-Regular";
 }
 
+#section-1,
+#section-2 {
+  flex: 1;
+}
 
 #section-1 {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 #section-2 {
-    text-align: right;
+  text-align: right;
 }
 
 h1 {
-    font-size: 1.5rem; 
+  font-size: 1.5rem;
+  
 }
-a { 
-    text-decoration: none; 
-    color: black; 
-    font-weight: bold; 
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 /* Seção Principal */
 
-#main-image{
-    background-image: url("../Midia/pao.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 47vw;
+#main-image {
+  background-image: url("../Midia/pao.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 47vw;
 }
-#main-image article{
-    width: 25vw;
-    margin:0;
-    padding-top: 20%;
-    padding-left: 15%;
-    color:white;
+#main-image article {
+  width: 25vw;
+  margin: 0;
+  padding-top: 20%;
+  padding-left: 15%;
+  color: white;
 }
-#main-image article h1{
-    font-size: 80px;
+#main-image article h1 {
+  font-size: 80px;
 }
-#main-image article p{
-    margin-top:-2.5vw;
-    font-size: 25px;
+#main-image article p {
+  margin-top: -2.5vw;
+  font-size: 25px;
 }
-#main-image article button{
-    width: 10vw;
-    height: 2vw;
-    cursor: pointer;
-    color:white;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+#main-image article button {
+  width: 10vw;
+  height: 2vw;
+  cursor: pointer;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Segunda seção */
 
-#main-itens{
-    width: 100%;
-    height: 45vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10vw;
+#main-itens {
+  width: 100%;
+  height: 45vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vw;
 }
 
 #itens{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 10vw;
-    align-items: center;
+  font-family: 'Roboto-flex';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10vw;
+  align-items: center;
 }
 
-.item-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 295px;
-    text-align: center;
+#itens p,a{
+  font-family: 'Roboto-flex';
+  font-weight: bold;
 }
-.item-card #img{
-    width: 290px;
-    height: 310px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+#itens a:hover{
+    text-decoration: underline;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 295px;
+  text-align: center;
+}
+.item-card #img {
+  width: 290px;
+  height: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Terceira seção */
 
-#sobre-nos{
-    width: 100%;
-    height: 47vw;
-    display: flex;
-    flex-direction: row;
+#sobre-nos {
+  width: 100%;
+  height: 47vw;
+  display: flex;
+  flex-direction: row;
 }
 
-#sobre-image{
-    width: 80%;
-    background-image: url("../Midia/coffeback.png");
-    background-position: cover;
-    background-repeat: no-repeat;
+#sobre-image {
+  width: 150vw;
+  background-image: url("../Midia/coffeback.png");
+  background-position: cover;
+  background-repeat: no-repeat;
 }
 
-#sobre-texto{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    padding-left:5vw;
-    padding-right:5vw;
+#sobre-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  text-align: center;
 }
 
-#sobre-texto img{
-    width: 344px;
-    height: 344px;
+#sobre-texto img {
+  width: 344px;
+  height: 344px;
 }
 
-#sobre-texto h1{
-    text-align: center;
-    font-size: 80px;
+#sobre-texto h1 {
+  text-align: center;
+  font-size: 100px;
+  font-family: "Yrsa";
+}
+
+/* footer */
+
+footer {
+  height: 7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10vw;
+}
+
+footer ul,li,p,h1{
+    font-family: "ABeeZee";
+}
+footer a{
+    text-align: none;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
 }
