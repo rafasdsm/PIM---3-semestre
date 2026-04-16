@@ -1,3 +1,6 @@
+/* --- CONFIGURAÇÃO DE FONTES --- 
+   Aqui carregamos as fontes externas. O 'font-display: swap' garante que o texto 
+   seja visível com uma fonte padrão enquanto a personalizada carrega. */
 @font-face {
   font-family: "ABeeZee";
   src: url("../Fonts/ABeeZee-Regular.ttf") format("truetype");
@@ -9,7 +12,7 @@
 @font-face {
   font-family: "Roboto-flex";
   src: url("../Fonts/Roboto-flex.ttf") format("truetype");
-  font-weight: 100 900;
+  font-weight: 100 900; /* Fontes variáveis aceitam múltiplos pesos */
   font-style: normal;
   font-display: swap;
 }
@@ -30,14 +33,15 @@
   font-display: swap;
 }
 
+/* --- RESET E REGRAS GERAIS --- */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho do elemento */
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; /* Evita a barra de rolagem horizontal se algo "vazar" da tela */
   width: 100%;
 }
 
@@ -45,13 +49,14 @@ p {
   font-family: "ABeeZee", sans-serif;
 }
 
+/* --- NAVEGAÇÃO (HEADER) --- */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Espalha os itens (esquerda, centro, direita) */
   align-items: center;
   padding: 15px 5%;
   font-family: sans-serif;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Se a tela for pequena, os itens pulam para a linha de baixo */
   gap: 15px;
 }
 
@@ -60,9 +65,10 @@ nav h1 {
   font-size: 1.5rem;
 }
 
+/* Divide o espaço do nav entre as seções laterais */
 #section-1, #section-2 {
   flex: 1;
-  min-width: 150px;
+  min-width: 150px; 
 }
 
 #section-1 {
@@ -80,14 +86,20 @@ a {
   font-weight: bold;
 }
 
+a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* --- SEÇÃO PRINCIPAL (HERO) --- */
 #main-image {
   background-image: url("../Midia/pao.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* A imagem cobre todo o container sem distorcer */
   background-position: center;
   width: 100%;
-  min-height: 500px;
-  height: 47vw;
+  min-height: 500px; /* Altura de segurança para dispositivos móveis */
+  height: 47vw; /* Altura proporcional à largura da tela no Desktop */
   display: flex;
   align-items: center;
 }
@@ -95,13 +107,13 @@ a {
 #main-image article {
   width: 100%;
   max-width: 450px;
-  margin: 0;
   padding-left: 10%;
   color: white;
 }
 
+/* clamp(mínimo, ideal, máximo): Faz a fonte ser fluida */
 #main-image article h1 {
-  font-size: clamp(3rem, 8vw, 80px);
+  font-size: clamp(3rem, 8vw, 80px); 
 }
 
 #main-image article p {
@@ -114,18 +126,19 @@ a {
   height: 40px;
   margin-top: 20px;
   cursor: pointer;
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  width: 10rem;
+  height: 3rem;
+  border:transparent;
 }
 
+/* --- SEÇÃO DE PRODUTOS (CARDS) --- */
 #main-itens {
   width: 100%;
-  min-height: 45vw;
   padding: 50px 5%;
   display: flex;
   flex-direction: column;
@@ -134,22 +147,11 @@ a {
 }
 
 #itens {
-  font-family: 'Roboto-flex';
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite que os cards se empilhem no celular */
   justify-content: center;
   gap: 40px;
-  align-items: flex-start;
-}
-
-#itens p, #itens a {
-  font-family: 'Roboto-flex';
-  font-weight: bold;
-}
-
-#itens a:hover {
-  text-decoration: underline;
 }
 
 .item-card {
@@ -160,57 +162,55 @@ a {
   text-align: center;
 }
 
+.item-card p{
+  margin-top: .5rem;
+}
+
+.item-card a{
+  margin-top: 1rem;
+}
+
 .item-card #img {
   width: 290px;
   height: 310px;
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  border-radius: 8px;
 }
 
+/* --- SEÇÃO SOBRE NÓS --- */
 #sobre-nos {
   width: 100%;
-  min-height: 47vw;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Coloca o texto abaixo da imagem em telas estreitas */
 }
 
 #sobre-image {
-  flex: 1;
+  flex: 1; /* Ocupa metade do espaço disponível */
   min-width: 300px;
   min-height: 350px;
   background-image: url("../Midia/coffeback.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 #sobre-texto {
   flex: 1;
   min-width: 300px;
+  padding: 40px 5vw;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
-  padding: 40px 5vw;
   text-align: center;
 }
 
-#sobre-texto img {
-  width: 100%;
-  max-width: 344px;
-  height: auto;
+#sobre-texto img{
+  min-width: 300px;
+  height: 300px;
 }
 
-#sobre-texto h1 {
-  font-size: clamp(3rem, 10vw, 100px);
-  font-family: "Yrsa";
-}
-
+/* --- FOOTER (RODAPÉ) --- */
 footer {
-  min-height: 100px;
   padding: 20px 5%;
   display: flex;
   flex-direction: row;
@@ -221,21 +221,18 @@ footer {
 }
 
 footer ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  flex-direction: row;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
 }
 
-footer ul, li, p, h1 {
-  font-family: "ABeeZee";
-}
-
+/* --- MEDIA QUERIES (REGRAS PARA TELAS ESPECÍFICAS) --- 
+   Mudanças manuais para quando a tela for menor que 768px */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
+    flex-direction: column; /* Alinha logo e links verticalmente */
   }
   
   #section-2 {
@@ -243,7 +240,7 @@ footer ul, li, p, h1 {
   }
 
   #main-image {
-    height: 80vh;
+    height: 80vh; /* Aumenta a altura proporcional no mobile para destaque */
     justify-content: center;
   }
 
@@ -253,7 +250,6 @@ footer ul, li, p, h1 {
   }
 
   footer {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Rodapé empilhado no celular */
   }
 }
