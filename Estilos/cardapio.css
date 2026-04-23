@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "ABeeZee";
+  src: url("../Fonts/ABeeZee-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-flex";
+  src: url("../Fonts/Roboto-flex.ttf") format("truetype");
+  font-weight: 100 900; /* Fontes variáveis aceitam múltiplos pesos */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yrsa";
+  src: url("../Fonts/Yrsa-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YsabeauOffice-Regular";
+  src: url("../Fonts/YsabeauOffice-Regular.ttf") format("truetype"); 
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -12,6 +44,8 @@ header button{
 header h1{
     margin-left: 15vw;
     margin-right: 15vw;
+    font-family: 'YsabeauOffice-Regular';
+    font-weight: bolder;
 }
 header button{
     margin-top: 14px;
@@ -28,10 +62,11 @@ nav{
     margin-top:5px ;
 }
 nav h1{
-    font-weight: lighter;
+    font-weight: bold;
     color:gray;
     font-size: x-large;
     cursor:pointer;
+    font-family: 'Roboto-flex';
 }
 nav h1:hover{
     text-decoration: underline;
@@ -63,6 +98,7 @@ main{
 .iten-card p{
     font-weight: 700;
     cursor: pointer;
+    font-family: 'Roboto-flex';
 }
 .iten-card p:hover{
     text-decoration: underline;
