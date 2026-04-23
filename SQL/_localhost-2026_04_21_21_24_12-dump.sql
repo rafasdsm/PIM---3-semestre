@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `admins`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `admins` (
   `admin_id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) DEFAULT NULL,
+  `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`admin_id`),
@@ -62,8 +62,9 @@ CREATE TABLE `clientes` (
   `endereco` varchar(500) NOT NULL,
   `cpf` char(11) NOT NULL,
   PRIMARY KEY (`cliente_id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `cpf` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,10 +164,9 @@ CREATE TABLE `pedidos` (
   `data_pedido` datetime NOT NULL,
   `status` varchar(50) NOT NULL DEFAULT 'Novo',
   `valor_total` decimal(10,2) DEFAULT NULL,
-  `endereco_entrega` varchar(255) DEFAULT NULL,
+  `endereco_entrega` varchar(255) NOT NULL,
   `forma_pagamento` varchar(50) DEFAULT NULL,
   `status_pagamento` varchar(30) DEFAULT 'pendente',
-  `observacao_pedido` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`pedido_id`),
   KEY `cliente_id` (`cliente_id`),
   CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`cliente_id`)
@@ -184,7 +184,7 @@ CREATE TABLE `produtos` (
   `produto_id` int NOT NULL AUTO_INCREMENT,
   `categoria_id` int NOT NULL,
   `nome` varchar(100) NOT NULL,
-  `descricao` varchar(255) DEFAULT NULL,
+  `descricao` varchar(255) NOT NULL,
   `preco` decimal(10,2) NOT NULL,
   `disponivel` tinyint(1) DEFAULT '1',
   `imagem_url` varchar(255) DEFAULT NULL,
@@ -204,4 +204,4 @@ CREATE TABLE `produtos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-15  6:33:42
+-- Dump completed on 2026-04-21 21:24:12
