@@ -33,7 +33,7 @@
   font-display: swap;
 }
 
-/* --- RESET E REGRAS GERAIS --- */
+/* --- REGRAS GERAIS --- */
 * {
   margin: 0;
   padding: 0;
@@ -188,10 +188,12 @@ a:hover{
 #sobre-image {
   flex: 1; /* Ocupa metade do espaço disponível */
   min-width: 300px;
+  height: 50vw;
   min-height: 350px;
   background-image: url("../Midia/coffeback.png");
   background-size: cover;
   background-position: center;
+  object-fit: cover;
 }
 
 #sobre-texto {
