@@ -56,6 +56,5 @@ Para usar o site do Café Pontes, basta acessar o site e seguir estes passos:
 ```
 
 ## 📸 Capturas de tela
-![Página Principal](Screenshot1.png)
-
 ![Cardápio](Screenshot2.png)
+![Página Principal](Screenshot1.png)
