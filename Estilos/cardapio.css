@@ -30,6 +30,12 @@
   font-display: swap;
 }
 
+body{
+    background-image: url("../Midia/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -70,6 +76,8 @@ nav h1{
 }
 nav h1:hover{
     text-decoration: underline;
+    color:black;
+    font-weight: bolder;
 }
 main{
     display: grid;
@@ -94,6 +102,7 @@ main{
     height: 187px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center;
 }
 .iten-card p{
     font-weight: 700;
