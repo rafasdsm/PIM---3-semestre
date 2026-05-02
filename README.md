@@ -18,7 +18,6 @@ O site do Café Pontes foi desenvolvido usando as seguintes tecnologias:
 * CSS3
 * Plugin de acessibilidade VLibras
 * Sistema de gerenciamento de banco de dados MySQL
-* Gateways de pagamento externos (ex.: Pix)
 * Arquivos CSS para estilização e funcionalidade
 
 ## 📦 Instalação
