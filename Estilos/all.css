@@ -5,3 +5,15 @@
 body {
     margin: 0;
 }
+
+/* --- RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%; /* Evita imagens extrapolando a tela */
+        height: auto;
+    }
+
+    * {
+        box-sizing: border-box; /* Garante padding sem estourar layout */
+    }
+}

@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Roboto-flex";
   src: url("../Fonts/Roboto-flex.ttf") format("truetype");
-  font-weight: 100 900; /* Fontes variáveis aceitam múltiplos pesos */
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -29,8 +29,6 @@
   font-style: normal;
   font-display: swap;
 }
-
-
 
 *{
     font-family: "YsabeauOffice-Regular";
@@ -78,7 +76,6 @@ main{
 #endereço-button{
     display: flex;
     flex-direction: row;
-
 }
 .endereço-entrega button{
     border:2px solid transparent;
@@ -176,4 +173,72 @@ footer button{
     border:2px solid transparent;
     font-size: x-large;
     cursor: pointer;
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    nav h1 {
+        margin-right: 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .endereço-entrega {
+        width: 100%;
+        gap: 5vw;
+        flex-wrap: wrap;
+    }
+
+    .pagamento-card {
+        width: 100%;
+    }
+
+    .cartao-form input {
+        height: 36px; /* altura fixa no mobile em vez de vw */
+    }
+
+    .pagamento-form {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .finalizar-container {
+        gap: 15px;
+    }
+
+    .resumo-container {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .item-card {
+        gap: 12px;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    footer button {
+        width: 80%;
+        height: 48px;
+        font-size: large;
+    }
 }

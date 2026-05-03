@@ -12,7 +12,7 @@
 @font-face {
   font-family: "Roboto-flex";
   src: url("../Fonts/Roboto-flex.ttf") format("truetype");
-  font-weight: 100 900; /* Fontes variáveis aceitam múltiplos pesos */
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -37,11 +37,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho do elemento */
+  box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden; /* Evita a barra de rolagem horizontal se algo "vazar" da tela */
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -52,11 +52,11 @@ p {
 /* --- NAVEGAÇÃO (HEADER) --- */
 nav {
   display: flex;
-  justify-content: space-between; /* Espalha os itens (esquerda, centro, direita) */
+  justify-content: space-between;
   align-items: center;
   padding: 15px 5%;
   font-family: sans-serif;
-  flex-wrap: wrap; /* Se a tela for pequena, os itens pulam para a linha de baixo */
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -65,7 +65,6 @@ nav h1 {
   font-size: 1.5rem;
 }
 
-/* Divide o espaço do nav entre as seções laterais */
 #section-1, #section-2 {
   flex: 1;
   min-width: 150px; 
@@ -95,11 +94,11 @@ a:hover{
 #main-image {
   background-image: url("../Midia/pao.png");
   background-repeat: no-repeat;
-  background-size: cover; /* A imagem cobre todo o container sem distorcer */
+  background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 500px; /* Altura de segurança para dispositivos móveis */
-  height: 47vw; /* Altura proporcional à largura da tela no Desktop */
+  min-height: 500px;
+  height: 47vw;
   display: flex;
   align-items: center;
 }
@@ -111,7 +110,6 @@ a:hover{
   color: white;
 }
 
-/* clamp(mínimo, ideal, máximo): Faz a fonte ser fluida */
 #main-image article h1 {
   font-size: clamp(3rem, 8vw, 80px); 
 }
@@ -149,7 +147,7 @@ a:hover{
 #itens {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* Permite que os cards se empilhem no celular */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
@@ -182,11 +180,11 @@ a:hover{
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* Coloca o texto abaixo da imagem em telas estreitas */
+  flex-wrap: wrap;
 }
 
 #sobre-image {
-  flex: 1; /* Ocupa metade do espaço disponível */
+  flex: 1;
   min-width: 300px;
   height: 50vw;
   min-height: 350px;
@@ -230,11 +228,10 @@ footer ul {
   justify-content: center;
 }
 
-/* --- MEDIA QUERIES (REGRAS PARA TELAS ESPECÍFICAS) --- 
-   Mudanças manuais para quando a tela for menor que 768px */
+/* --- MEDIA QUERIES (REGRAS PARA TELAS ESPECÍFICAS) --- */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column; /* Alinha logo e links verticalmente */
+    flex-direction: column;
   }
   
   #section-2 {
@@ -242,7 +239,7 @@ footer ul {
   }
 
   #main-image {
-    height: 80vh; /* Aumenta a altura proporcional no mobile para destaque */
+    height: 80vh;
     justify-content: center;
   }
 
@@ -252,6 +249,45 @@ footer ul {
   }
 
   footer {
-    flex-direction: column; /* Rodapé empilhado no celular */
+    flex-direction: column;
+  }
+
+  /* Adições para melhor experiência mobile */
+  #section-1 {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .item-card {
+    width: 45%; /* 2 cards por linha no mobile */
+    min-width: 140px;
+  }
+
+  .item-card #img {
+    width: 100%;
+    height: 180px;
+  }
+
+  #sobre-image {
+    height: 60vw;
+    min-height: 250px;
+  }
+
+  #sobre-texto img {
+    min-width: unset;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-card {
+    width: 80%; /* 1 card por linha em telas muito pequenas */
+  }
+
+  #main-itens {
+    padding: 30px 5%;
+    gap: 25px;
   }
 }

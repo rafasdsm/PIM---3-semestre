@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Roboto-flex";
   src: url("../Fonts/Roboto-flex.ttf") format("truetype");
-  font-weight: 100 900; /* Fontes variáveis aceitam múltiplos pesos */
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -111,4 +111,64 @@ main{
 }
 .iten-card p:hover{
     text-decoration: underline;
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 8px;
+        text-align: center;
+    }
+    header img{
+        height: 32px;
+        width: 32px;
+    }
+
+    header h1 {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.4rem;
+    }
+
+    header button {
+        font-size: 6vw; /* vw relativo funciona melhor em mobile */
+        margin-top: 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+
+    nav h1 {
+        font-size: large;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr; /* 2 colunas no mobile */
+        max-width: 100%;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .iten-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .iten-card img {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
 }
