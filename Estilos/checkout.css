@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "ABeeZee";
+  src: url("../Fonts/ABeeZee-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-flex";
+  src: url("../Fonts/Roboto-flex.ttf") format("truetype");
+  font-weight: 100 900; /* Fontes variáveis aceitam múltiplos pesos */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yrsa";
+  src: url("../Fonts/Yrsa-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YsabeauOffice-Regular";
+  src: url("../Fonts/YsabeauOffice-Regular.ttf") format("truetype"); 
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+*{
+    font-family: "YsabeauOffice-Regular";
+}
+body{
+    background-image:url("../Midia/background.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1{
+    margin-right: 50%;
+}
+.cards-container{
+    display: flex;
+    flex-direction: row;
+}
+nav a{
+    color:black;
+    margin-left: 3%;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.endereço-entrega{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10vw;
+    border:2px solid transparent;
+    width: 30vw;
+    border-radius: 22px;
+    padding:10px;
+    background-color: #D9D9D9;
+}
+#endereço-button{
+    display: flex;
+    flex-direction: row;
+
+}
+.endereço-entrega button{
+    border:2px solid transparent;
+    width: 155px;
+    height: 35px;
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: #D8C5B6;
+}
+.endereço-entrega button:hover{
+    cursor: pointer;
+}
+
+.pagamento-card{
+    width: 30vw;
+    border:2px solid transparent;
+    background-color: #D9D9D9;
+    padding:20px;
+    border-radius: 23px;
+}
+.cartao-form input{
+    width: 100%;
+    background-color: #D9D9D9;
+    border:2px solid gray;
+    height: 1.4vw;
+    border-radius: 5px;
+}
+#validade-card{
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+}
+.pagamento-form{
+    border:2px solid #D8C5B6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.finalizar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:1.5vw;
+}
+.resumo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:1.5vw;
+    width: 50%;
+    border:2px solid transparent;
+    border-radius: 17px;
+    background-color: #D9D9D9;
+    padding:15px
+}
+.resumo-container *{
+    font-family: "ABeeZee";
+}
+.resumo-container hr{
+    width: 100%;
+}
+.item-card{
+    display: flex;
+    flex-direction: row;
+    gap:1.3vw;
+}
+.item-card img{
+    width: 111px;
+    height: 111px;
+    object-fit: cover;
+}
+.bottom-texts-container{
+    display: flex;
+    flex-direction: column;
+}
+.text-resumo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer{
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+footer button{
+    width: 15vw;
+    height: 3vw;
+    background-color: #A3724A;
+    border-radius: 5px;
+    color:white;
+    border:2px solid transparent;
+    font-size: x-large;
+    cursor: pointer;
+}

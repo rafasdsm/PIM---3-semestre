@@ -15,53 +15,108 @@
     <h1>Café Pontes</h1>
   </nav>
   <main>
-    <section>
-      <article>
-        <!--Endereço de entrega-->
-        <section>
-          <h1>Finalizar Pedido</h1>
-          <h2>Confira seus dados e escolha a forma de pagamento</h2>
-          <article>
+    <!--
+    Card de entrega
+    -->
+    <section class="finalizar-container">
+      <h1>Finalizar Pedido</h1>
+      <h3>Confira seus dados e escolha a forma de pagamento</h3>
+      <section class="endereço-entrega">
+        <article>
+          <h3>Endereco de entrega</h3>
+          <p>Rua das Flores, 123 - Centro<br>Campinas - SP<br>CEP: 13010-000</p>
+        </article>
+        <article id="endereço-button">
+          <button>Alterar entrega</button>
+        </article>
+      </section>
+
+      <!--
+      Card de pagamento
+      -->
+      <section class="pagamento-card">
+        <h3>Forma de pagamento</h3>
+        <article class="pagamento-form">
+          <input type="checkbox" id="cardcred">
+          <label for="cardcred">
+            Cartão de credito
+          </label>
+          <input type="checkbox" id="pix">
+          <label for="pix">
+            Pix
+          </label>
+          <input type="checkbox" id="dinheiro">
+          <label for="dinheiro">
+            Dinheiro
+          </label>
+        </article>
+        <article class="cartao-form">
+          <label for="numero-cartao">
+            Número do cartão
+          </label><br>
+          <input type="number" id="numero-cartao" placeholder="0000 0000 0000"><br>
+          <label for="nome-cartao">
+            Nome do cartao
+          </label><br>
+          <input type="text" id="nome-cartao">
+          <div id="validade-card">
             <article>
-              <h2>Endereço de entrega</h2>
-              <h3>Rua das Flores, 123 - Centro</h3>
-              <h3>Campinas - SP</h3>
-              <h3>CEP: 13010-000</h3>
+              <label for="validade">
+                Validade
+              </label><br>
+              <input type="number" id="validade" placeholder="MM/AA">
+              <label></label>
             </article>
-            <button>Alterar endereço</button>
+            <article>
+              <label for="CVV">
+                CVV
+              </label><br>
+              <input type="number" id="CVV">
+            </article>
+          </div>
           </article>
-          <!--
-          Forma de pagamento
-          -->
-          <article>
-            <h1>Forma de pagamento</h1>
-            <form>
-              <input type="radio" id="cartao" name="pagamento" value="cartao">
-              <label for="cartao">Cartão de Crédito</label>
-              <input type="radio" id="Pix" name="pagamento" value="Pix">
-              <label for="Pix">Pix</label>
-              <input type="radio" id="Dinheiro" name="pagamento" value="Dinheiro">
-              <label for="Dinheiro">Dinheiro</label>
-            </form>
-            <form>
-              <label for="numcartao">Número do cartão</label>
-              <input type="text" id="numcartao" name="numcartao">
-              <label for="nomecartao">Nome do cartão</label>
-              <aside>
-                <label for="validadecartao">Validade</label>
-                <input type="text" id="validadecartao" name="validadecartao">
-                <label for="cvvcartao">CVV</label>
-                <input type="text" id="cvvcartao" name="cvvcartao">
-              </aside>
-            </form>
-          </article>
-        </section>
+        </article>
+      </section>
+    </section>
+    <section class="resumo-container">
+      <h1><img src="Midia/Shopping Car.png" height="32" width="32">      Resumo do pedido</h1>
+      <article class="item-card">
+        <img src="Midia/item6.jpg">
+        <aside id="item-desc">
+          <p>Croissant tradicional</p>
+          <p>x2</p>
+        </aside>
       </article>
-      <article>
-        
+      <hr>
+      <article class="item-card">
+        <img src="Midia/item3.jpg">
+        <aside id="item-desc">
+          <p>Banoffe com sorvete</p>
+          <p>x2</p>
+        </aside>
+      </article>
+      <article class="bottom-texts-container">
+        <span class="text-resumo">
+          <h3>Subtotal</h3>
+          <h3>R$ 00,00</h3>
+        </span>
+        <span class="text-resumo">
+          <h3>Entrega</h3>
+          <h3>R$ 00,00</h3>
+        </span>
+        <hr>
+        <span class="text-resumo">
+          <h3>Total</h3>
+          <h3>R$ 00,00</h3>
+        </span>
       </article>
     </section>
   </main>
+  <footer>
+    <button>
+      Continuar
+    </button>
+  </footer>
 </body>
 <link rel="stylesheet" href="Estilos/checkout.css">
 </html>
