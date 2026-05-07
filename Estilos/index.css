@@ -35,12 +35,14 @@
 
 /* --- REGRAS GERAIS --- */
 * {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   overflow-x: hidden;
   width: 100%;
 }
@@ -230,6 +232,14 @@ footer ul {
 
 /* --- MEDIA QUERIES (REGRAS PARA TELAS ESPECÍFICAS) --- */
 @media (max-width: 768px) {
+  img {
+        max-width: 100%; /* Evita imagens extrapolando a tela */
+        height: auto;
+    }
+
+    * {
+        box-sizing: border-box; /* Garante padding sem estourar layout */
+    }
   nav {
     flex-direction: column;
   }
